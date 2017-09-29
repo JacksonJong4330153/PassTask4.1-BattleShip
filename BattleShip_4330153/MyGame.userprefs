@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\Model\SeaGrid.cs">
+    <Files>
+      <File FileName="src\Model\GameMain.cs" Line="23" Column="17" />
+      <File FileName="src\Model\SeaGrid.cs" Line="39" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

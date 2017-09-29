@@ -1,0 +1,19 @@
+Conversion Error Report (Created 9/20/2017 1:13:12 AM UTC)
+
+Every time a possible conversion problem is located, the file name, problem severity , and problem description are recorded. There are three levels of severity:
+
+	Warning	= code will convert and will likely work, but conversion may need manual improvement
+	Minor	= code will convert, but it will likely need manual correction to work
+	Major	= code will not convert. It must be modified before used with converter
+
+There are also general issues to remember when converting web sites:
+	- Events connected with the Handles syntax in VB will not work in C#. Events must be connected in code or in the control markup.
+	- Any VB/C# in your ASPX markup cannot be automatically converted. You must convert this manually or convert the code in chunks using the normal Code Converter.
+	- The page language and code file references in ASPX files need to be changed the page language changes.
+	- AssemblyInfo classes cannot be automatically converted. These must be manually updated.
+
+Report Details:
+================================================
+No potential conversion problems found in uploaded files.
+
+End Report (0 total matches)
