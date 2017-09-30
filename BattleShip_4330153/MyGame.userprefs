@@ -5,10 +5,9 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\EndingGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameController.cs">
     <Files>
-      <File FileName="src\EndingGameController.cs" Line="1" Column="1" />
-      <File FileName="src\GameController.cs" Line="1" Column="1" />
+      <File FileName="src\GameController.cs" Line="55" Column="3" />
       <File FileName="src\GameLogic.cs" Line="1" Column="1" />
       <File FileName="src\GameResources.cs" Line="1" Column="1" />
       <File FileName="src\GameState.cs" Line="1" Column="1" />
