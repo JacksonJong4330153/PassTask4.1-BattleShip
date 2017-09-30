@@ -40,7 +40,7 @@ public class BattleShipsGame
 	/// <returns>The current player</returns>
 	/// <remarks>This value will switch between the two players as they have their attacks</remarks>
 	public Player Player {
-		get { return _players(_playerIndex); }
+		get { return _players[_playerIndex]; }
 	}
 
 	/// <summary>
@@ -50,10 +50,10 @@ public class BattleShipsGame
 	/// <param name="p"></param>
 	public void AddDeployedPlayer(Player p)
 	{
-		if (_players(0) == null) {
-			_players(0) = p;
-		} else if (_players(1) == null) {
-			_players(1) = p;
+		if (_players[0] == null) {
+			_players[0] = p;
+		} else if (_players[1] == null) {
+			_players[1] = p;
 			CompleteDeployment();
 		} else {
 			throw new ApplicationException("You cannot add another player, the game already has two players.");
@@ -66,8 +66,8 @@ public class BattleShipsGame
 	/// </summary>
 	private void CompleteDeployment()
 	{
-		_players(0).Enemy = new SeaGridAdapter(_players(1).PlayerGrid);
-		_players(1).Enemy = new SeaGridAdapter(_players(0).PlayerGrid);
+		_players[0].Enemy = new SeaGridAdapter(_players[1].PlayerGrid);
+		_players[1].Enemy = new SeaGridAdapter(_players[0].PlayerGrid);
 	}
 
 	/// <summary>
@@ -85,7 +85,7 @@ public class BattleShipsGame
 		newAttack = Player.Shoot(row, col);
 
 		//Will exit the game when all players ships are destroyed
-		if (_players(otherPlayer).IsDestroyed) {
+		if (_players[otherPlayer].IsDestroyed) {
 			newAttack = new AttackResult(ResultOfAttack.GameOver, newAttack.Ship, newAttack.Text, row, col);
 		}
 

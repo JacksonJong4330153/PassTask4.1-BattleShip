@@ -5,11 +5,10 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\Model\AIPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\Model\BattleShipsGame.cs">
     <Files>
-      <File FileName="src\Model\ISeaGrid.cs" Line="16" Column="20" />
-      <File FileName="src\Model\SeaGrid.cs" Line="69" Column="27" />
-      <File FileName="src\Model\AIPlayer.cs" Line="32" Column="4" />
+      <File FileName="src\Model\AIPlayer.cs" Line="41" Column="27" />
+      <File FileName="src\Model\BattleShipsGame.cs" Line="18" Column="77" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +18,7 @@
               <Node name="References" expanded="True" />
               <Node name="src" expanded="True">
                 <Node name="Model" expanded="True">
-                  <Node name="AIPlayer.cs" selected="True" />
+                  <Node name="BattleShipsGame.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
