@@ -170,7 +170,6 @@
     <Compile Include="src\Model\AttackResult.cs" />
     <Compile Include="src\Model\BattleShipsGame.cs" />
     <Compile Include="src\Model\Direction.cs" />
-    <Compile Include="src\Model\GameMain.cs" />
     <Compile Include="src\Model\ISeaGrid.cs" />
     <Compile Include="src\Model\Player.cs" />
     <Compile Include="src\Model\ResultOfAttack.cs" />
