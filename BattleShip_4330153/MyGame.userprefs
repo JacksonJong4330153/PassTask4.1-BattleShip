@@ -5,14 +5,32 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\HighScoreController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\Model\SeaGrid.cs">
     <Files>
       <File FileName="src\GameController.cs" Line="12" Column="65" />
       <File FileName="src\GameLogic.cs" Line="40" Column="1" />
-      <File FileName="src\HighScoreController.cs" Line="17" Column="33" />
-      <File FileName="src\MenuController.cs" Line="1" Column="1" />
-      <File FileName="src\UtilityFunctions.cs" Line="1" Column="1" />
+      <File FileName="src\HighScoreController.cs" Line="204" Column="4" />
+      <File FileName="src\MenuController.cs" Line="15" Column="1" />
+      <File FileName="src\UtilityFunctions.cs" Line="156" Column="13" />
+      <File FileName="src\Model\ISeaGrid.cs" Line="28" Column="22" />
+      <File FileName="src\Model\SeaGrid.cs" Line="63" Column="27" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyGame" expanded="True">
+            <Node name="MyGame" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="src" expanded="True">
+                <Node name="Model" expanded="True">
+                  <Node name="SeaGrid.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
 </Properties>
