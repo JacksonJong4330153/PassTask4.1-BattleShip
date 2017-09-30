@@ -74,6 +74,22 @@ public abstract class AIPlayer : Player
 		{
 			return @this == null || other == null || @this.Row != other.Row || @this.Column != other.Column;
 		}
+
+		public override bool Equals(object obj)
+		{
+			if (obj == null || this.GetType() != obj.GetType())
+				return false;
+
+			if (((Location)obj).Column == Column && ((Location)obj).Row == Row)
+				return true;
+
+			return false;
+		}
+
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
 	}
 
 
@@ -116,7 +132,7 @@ public abstract class AIPlayer : Player
 			result = _game.Shoot(row, column);
 			//take shot
 			ProcessShot(row, column, result);
-		} while (result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver && !SwinGame.WindowCloseRequested);
+		} while (result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver && !SwinGame.WindowCloseRequested());
 
 		return result;
 	}

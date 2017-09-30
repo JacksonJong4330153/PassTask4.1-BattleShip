@@ -5,12 +5,14 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\Model\Ship.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameController.cs">
     <Files>
-      <File FileName="src\Model\AIPlayer.cs" Line="41" Column="27" />
-      <File FileName="src\Model\BattleShipsGame.cs" Line="21" Column="48" />
-      <File FileName="src\Model\SeaGridAdapter.cs" Line="57" Column="3" />
-      <File FileName="src\Model\Ship.cs" Line="83" Column="17" />
+      <File FileName="src\EndingGameController.cs" Line="22" Column="3" />
+      <File FileName="src\GameController.cs" Line="375" Column="52" />
+      <File FileName="src\Model\AIPlayer.cs" Line="27" Column="17" />
+      <File FileName="src\Model\SeaGrid.cs" Line="22" Column="18" />
+      <File FileName="src\Model\Player.cs" Line="30" Column="31" />
+      <File FileName="src\GameState.cs" Line="21" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,10 +20,10 @@
           <Node name="MyGame" expanded="True">
             <Node name="MyGame" expanded="True">
               <Node name="References" expanded="True" />
+              <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
-                <Node name="Model" expanded="True">
-                  <Node name="Ship.cs" selected="True" />
-                </Node>
+                <Node name="Model" expanded="True" />
+                <Node name="GameController.cs" selected="True" />
               </Node>
             </Node>
           </Node>

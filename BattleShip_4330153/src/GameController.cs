@@ -357,7 +357,7 @@ public static class GameController
 	public static void SwitchState(GameState newState)
 	{
 		EndCurrentState();
-		AddNewState(newState);
+		GameController.AddNewState(newState);
 	}
 
 	/// <summary>
