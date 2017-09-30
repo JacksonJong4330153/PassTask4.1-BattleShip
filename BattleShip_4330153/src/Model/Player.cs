@@ -14,7 +14,7 @@ public class Player : IEnumerable<Ship>
 
 	protected static Random _Random = new Random();
 	private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
-	private SeaGrid _playerGrid = new SeaGrid(_Ships);
+	private SeaGrid _playerGrid;
 	private ISeaGrid _enemyGrid;
 
 	protected BattleShipsGame _game;
@@ -88,12 +88,12 @@ public class Player : IEnumerable<Ship>
 	/// <value>The ship</value>
 	/// <returns>The ship with the indicated name</returns>
 	/// <remarks>The none ship returns nothing/null</remarks>
-	public Ship Ship {
-		get {
+	public Ship Ship (ShipName name) {
+	 	{
 			if (name == ShipName.None)
 				return null;
 
-			return _Ships.Item(name);
+			return _Ships [name];
 		}
 	}
 
