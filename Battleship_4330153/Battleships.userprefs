@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{AC5B5163-E1B0-4B3A-AD13-DC1B22638DC0}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="battleships\src\Model\BattleShipsGame.cs">
+    <Files>
+      <File FileName="battleships\src\DiscoveryController.cs" Line="54" Column="5" />
+      <File FileName="battleships\src\DeploymentController.cs" Line="208" Column="47" />
+      <File FileName="battleships\src\Model\Tile.cs" Line="62" Column="15" />
+      <File FileName="battleships\src\Model\Player.cs" Line="229" Column="38" />
+      <File FileName="battleships\src\Model\SeaGrid.cs" Line="66" Column="52" />
+      <File FileName="battleships\src\Model\AIOption.cs" Line="30" Column="2" />
+      <File FileName="battleships\src\Model\AIPlayer.cs" Line="106" Column="3" />
+      <File FileName="battleships\src\GameController.cs" Line="96" Column="10" />
+      <File FileName="battleships\src\Model\AttackResult.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\Model\BattleShipsGame.cs" Line="118" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Battleships PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
