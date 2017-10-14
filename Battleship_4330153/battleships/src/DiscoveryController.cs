@@ -64,8 +64,8 @@ static class DiscoveryController
 		const int SHOTS_TOP = 157;
 		const int HITS_TOP = 206;
 		const int SPLASH_TOP = 256;
-		//const int SHIPS_LEFT = 100;
-		//const int SHIPS_TOP = 281;
+		const int SHIPS_LEFT = 100;
+		const int SHIPS_TOP = 281;
 
 		if ((SwinGame.KeyDown (KeyCode.vk_LSHIFT) | SwinGame.KeyDown (KeyCode.vk_RSHIFT)) & SwinGame.KeyDown (KeyCode.vk_c)) {
 			UtilityFunctions.DrawField (GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
@@ -80,6 +80,17 @@ static class DiscoveryController
 		SwinGame.DrawText (GameController.HumanPlayer.Shots.ToString (), Color.White, GameResources.GameFont ("Menu"), SCORES_LEFT, SHOTS_TOP);
 		SwinGame.DrawText (GameController.HumanPlayer.Hits.ToString (), Color.White, GameResources.GameFont ("Menu"), SCORES_LEFT, HITS_TOP);
 		SwinGame.DrawText (GameController.HumanPlayer.Missed.ToString (), Color.White, GameResources.GameFont ("Menu"), SCORES_LEFT, SPLASH_TOP);
+
+		SwinGame.DrawText (GameController.ComputerPlayer.Ship (ShipName.AircraftCarrier).Name, GameController.ComputerPlayer.Ship (ShipName.AircraftCarrier).IsDestroyed ? Color.Yellow : Color.White,
+						  GameResources.GameFont ("Menu"), SHIPS_LEFT, SHIPS_TOP);
+		SwinGame.DrawText (GameController.ComputerPlayer.Ship (ShipName.Battleship).Name, GameController.ComputerPlayer.Ship (ShipName.Battleship).IsDestroyed ? Color.Yellow : Color.White,
+						  GameResources.GameFont ("Menu"), SHIPS_LEFT, SHIPS_TOP + 15);
+		SwinGame.DrawText (GameController.ComputerPlayer.Ship (ShipName.Destroyer).Name, GameController.ComputerPlayer.Ship (ShipName.Destroyer).IsDestroyed ? Color.Yellow : Color.White,
+						  GameResources.GameFont ("Menu"), SHIPS_LEFT, SHIPS_TOP + 30);
+		SwinGame.DrawText (GameController.ComputerPlayer.Ship (ShipName.Submarine).Name, GameController.ComputerPlayer.Ship (ShipName.Submarine).IsDestroyed ? Color.Yellow : Color.White,
+						  GameResources.GameFont ("Menu"), SHIPS_LEFT, SHIPS_TOP + 45);
+		SwinGame.DrawText (GameController.ComputerPlayer.Ship (ShipName.Tug).Name, GameController.ComputerPlayer.Ship (ShipName.Tug).IsDestroyed ? Color.Yellow : Color.White,
+						  GameResources.GameFont ("Menu"), SHIPS_LEFT, SHIPS_TOP + 60);
 
 	}
 }

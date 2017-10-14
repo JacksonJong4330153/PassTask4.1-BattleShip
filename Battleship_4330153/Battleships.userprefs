@@ -4,7 +4,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="battleships\src\Model\BattleShipsGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="battleships\src\DiscoveryController.cs">
     <Files>
       <File FileName="battleships\src\DiscoveryController.cs" Line="54" Column="5" />
       <File FileName="battleships\src\DeploymentController.cs" Line="208" Column="47" />
@@ -15,7 +15,10 @@
       <File FileName="battleships\src\Model\AIPlayer.cs" Line="106" Column="3" />
       <File FileName="battleships\src\GameController.cs" Line="96" Column="10" />
       <File FileName="battleships\src\Model\AttackResult.cs" Line="1" Column="1" />
-      <File FileName="battleships\src\Model\BattleShipsGame.cs" Line="118" Column="3" />
+      <File FileName="battleships\src\Model\BattleShipsGame.cs" Line="88" Column="3" />
+      <File FileName="battleships\src\Model\AIMediumPlayer.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\Model\AIEasyPlayer.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\Model\AIHardPlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
