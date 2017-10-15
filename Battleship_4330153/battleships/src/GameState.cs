@@ -32,7 +32,7 @@ public enum GameState
 	/// </summary>
 	AlteringSettings,
 
-	///Music new setting
+	///Added Music new setting
 	MusicSettings,
 
 	/// <summary>

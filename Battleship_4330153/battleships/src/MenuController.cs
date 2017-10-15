@@ -25,8 +25,8 @@ static class MenuController
 			"PLAY",
 			"SETUP",
 			"SCORES",
-			/*CHANGES*/
-			//"MUSIC",
+			/*Add Music*/
+			"MUSIC",
 			"QUIT"
 		},
 		new string[] {
@@ -39,8 +39,13 @@ static class MenuController
 			"MEDIUM",
 			"HARD",
 
+		},
+		/*Add Sub Menu in Music*/
+		new string[]{
+			"BGM1",
+			"BGM2",
+			"MUTE"
 		}
-
 
 	};
 	private const int MENU_TOP = 575;
@@ -54,18 +59,27 @@ static class MenuController
 	private const int MAIN_MENU = 0;
 	private const int GAME_MENU = 1;
 	private const int SETUP_MENU = 2;
-
+	/*Added Music Menu*/
+	private const int MUSIC_MENU = 3;
 
 	private const int MAIN_MENU_PLAY_BUTTON = 0;
 	private const int MAIN_MENU_SETUP_BUTTON = 1;
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
-	private const int MAIN_MENU_QUIT_BUTTON = 3;
+	/*Added Music Menu Button*/
+	private const int MAIN_MENU_MUSIC_BUTTON = 3;
+	private const int MAIN_MENU_QUIT_BUTTON = 4;
 
 	private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
 	private const int SETUP_MENU_TRAIN_BUTTON = 3;
 	private const int SETUP_MENU_EXIT_BUTTON = 4;
+
+	/*Added Sub Menu Button under Music*/
+	private const int MUSIC_MENU_MUSIC1_BUTTON = 0;
+	private const int MUSIC_MENU_MUSIC2_BUTTON = 1;
+	private const int MUSIC_MENU_MUTE_BUTTON = 2;
+	private const int MUSIC_MENU_EXIT_BUTTON = 3;
 
 	private const int GAME_MENU_RETURN_BUTTON = 0;
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
@@ -75,7 +89,8 @@ static class MenuController
 
 	private static readonly Color HIGHLIGHT_COLOR = SwinGame.RGBAColor (1, 57, 86, 255);
 
-
+	/*True False boolean for mute music*/
+	private static bool muted = true;
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
 	/// </summary>
@@ -97,6 +112,16 @@ static class MenuController
 		}
 	}
 
+	/*Added Music Menu Handler*/
+	public static void HandleMusicMenuInput ()
+	{
+		bool handled = false;
+		handled = HandleMenuInput (MUSIC_MENU, 1, 1);
+
+		if (!handled) {
+			HandleMenuInput (MAIN_MENU, 0, 0);
+
+		}	}
 
 	/// <summary>
 	/// Handle input in the game menu.
@@ -175,6 +200,11 @@ static class MenuController
 		DrawButtons (SETUP_MENU, 1, 1);
 	}
 
+	/*Draw Sub Menu*/
+	public static void MusicSettings ()
+	{
+		DrawButtons (MAIN_MENU);
+		DrawButtons (MUSIC_MENU, 1, 1);	}
 
 	/// <summary>
 	/// Draw the buttons associated with a top level menu.
@@ -255,6 +285,10 @@ static class MenuController
 		case GAME_MENU:
 			PerformGameMenuAction (button);
 			break;
+			/*Added PerformMusicMenuAction*/
+		case MUSIC_MENU:
+            PerformMusicMenuAction (button);
+			break;
 
 		}
 	}
@@ -277,6 +311,10 @@ static class MenuController
 			break;
 		case MAIN_MENU_QUIT_BUTTON:
 			GameController.EndCurrentState ();
+			break;
+			/*Added NewState for MusicSetting*/
+		case MAIN_MENU_MUSIC_BUTTON:
+			GameController.AddNewState (GameState.MusicSettings);
 			break;
 		};
 	}
@@ -302,6 +340,37 @@ static class MenuController
 		GameController.EndCurrentState ();
 	}
 
+	/*Add Method PerformMusicMenuAction*/
+	public static void PerformMusicMenuAction (int button)
+	{
+		switch (button) {
+		case MUSIC_MENU_MUSIC1_BUTTON:
+			//SwinGame.Play	Music (GameResources.GameMusic ("Background"));
+			Audio.PlayMusic (GameResources.GameMusic ("Background"));
+			break;
+
+
+
+		case MUSIC_MENU_MUSIC2_BUTTON:
+			//SwinGame.PlayMusic (GameResources.GameMusic ("Background1"));
+			Audio.PlayMusic (GameResources.GameMusic ("Background1"));
+			break;
+
+		/*Added Case Mute Button*/
+		case MUSIC_MENU_MUTE_BUTTON:
+			if (muted == true) {
+				SwinGame.StopMusic ();
+				muted = false;
+				break;
+			} else {
+				Audio.PlayMusic (GameResources.GameMusic ("Background"));
+				muted = true;
+				break;
+			}
+		}
+
+		GameController.EndCurrentState ();	}
+
 	/// <summary>
 	/// The game menu was clicked, perform the button's action.
 	/// </summary>
@@ -324,4 +393,12 @@ static class MenuController
 		}
 	}
 
+	/*GETTER SETTER for bool muted*/
+	public static bool Set_muted {
+		get { return muted; }
+		set { muted = value; }
+	}
+
+	public static bool Get_Set_muted {
+		get { return muted; }	}
 }

@@ -72,7 +72,7 @@ public static class GameResources
 	private static void LoadMusic ()
 	{
 		NewMusic ("Background", "horrordrone.mp3");
-		/*changes*/
+/*Added New BGM music from https://www.bensound.com/royalty-free-music/track/epic*/
 		NewMusic ("Background1", "battlemusic.mp3");
 	}
 
