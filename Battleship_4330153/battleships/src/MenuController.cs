@@ -23,10 +23,10 @@ static class MenuController
 	private static readonly string [] [] _menuStructure = {
 		new string[] {
 			"PLAY",
-			"SETUP",
-			"SCORES",
 			/*Add Music*/
 			"MUSIC",
+			"SETUP",
+			"SCORES",
 			"QUIT"
 		},
 		new string[] {
@@ -42,9 +42,9 @@ static class MenuController
 		},
 		/*Add Sub Menu in Music*/
 		new string[]{
-			"BGM1",
-			"BGM2",
-			"MUTE"
+			"MUTE",
+			"MUSIC1",
+			"MUSIC2"
 		}
 
 	};
@@ -63,23 +63,23 @@ static class MenuController
 	private const int MUSIC_MENU = 3;
 
 	private const int MAIN_MENU_PLAY_BUTTON = 0;
-	private const int MAIN_MENU_SETUP_BUTTON = 1;
-	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
 	/*Added Music Menu Button*/
-	private const int MAIN_MENU_MUSIC_BUTTON = 3;
+	private const int MAIN_MENU_MUSIC_BUTTON = 1;
+	private const int MAIN_MENU_SETUP_BUTTON = 2;
+	private const int MAIN_MENU_TOP_SCORES_BUTTON = 3;
 	private const int MAIN_MENU_QUIT_BUTTON = 4;
+
+	/*Added Sub Menu Button under Music*/
+	private const int MUSIC_MENU_MUTE_BUTTON = 0;
+	private const int MUSIC_MENU_MUSIC1_BUTTON = 1;
+	private const int MUSIC_MENU_MUSIC2_BUTTON = 2;
+	private const int MUSIC_MENU_EXIT_BUTTON = 3;
 
 	private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
 	private const int SETUP_MENU_TRAIN_BUTTON = 3;
 	private const int SETUP_MENU_EXIT_BUTTON = 4;
-
-	/*Added Sub Menu Button under Music*/
-	private const int MUSIC_MENU_MUSIC1_BUTTON = 0;
-	private const int MUSIC_MENU_MUSIC2_BUTTON = 1;
-	private const int MUSIC_MENU_MUTE_BUTTON = 2;
-	private const int MUSIC_MENU_EXIT_BUTTON = 3;
 
 	private const int GAME_MENU_RETURN_BUTTON = 0;
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
@@ -91,6 +91,15 @@ static class MenuController
 
 	/*True False boolean for mute music*/
 	private static bool muted = true;
+	/*GETTER SETTER for bool muted*/
+	public static bool Set_muted {
+		get { return muted; }
+		set { muted = value; }
+	}
+
+	public static bool Get_Set_muted {
+		get { return muted; }	}
+
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
 	/// </summary>
@@ -167,6 +176,13 @@ static class MenuController
 			}
 		}
 
+		/*Added HotKey to Pause Music*/
+		if (SwinGame.KeyTyped (KeyCode.vk_F1)) {
+			muted = true;
+			if (muted == true) {
+				SwinGame.StopMusic ();
+			};
+		}
 		return false;
 	}
 
@@ -345,18 +361,13 @@ static class MenuController
 	{
 		switch (button) {
 		case MUSIC_MENU_MUSIC1_BUTTON:
-			//SwinGame.Play	Music (GameResources.GameMusic ("Background"));
 			Audio.PlayMusic (GameResources.GameMusic ("Background"));
 			break;
 
-
-
 		case MUSIC_MENU_MUSIC2_BUTTON:
-			//SwinGame.PlayMusic (GameResources.GameMusic ("Background1"));
 			Audio.PlayMusic (GameResources.GameMusic ("Background1"));
 			break;
 
-		/*Added Case Mute Button*/
 		case MUSIC_MENU_MUTE_BUTTON:
 			if (muted == true) {
 				SwinGame.StopMusic ();
@@ -392,13 +403,4 @@ static class MenuController
 			break;
 		}
 	}
-
-	/*GETTER SETTER for bool muted*/
-	public static bool Set_muted {
-		get { return muted; }
-		set { muted = value; }
-	}
-
-	public static bool Get_Set_muted {
-		get { return muted; }	}
 }

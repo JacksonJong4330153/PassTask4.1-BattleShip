@@ -344,9 +344,9 @@ public static class GameController
 		case GameState.Discovering:
 			DiscoveryController.DrawDiscovery ();
 			break;
-		case GameState.EndingGame:
-			EndingGameController.DrawEndOfGame ();
-			break;
+		//case GameState.EndingGame:
+		//	EndingGameController.DrawEndOfGame ();
+		//	break;
 		case GameState.ViewingHighScores:
 			HighScoreController.DrawHighScores ();
 			break;
