@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{AC5B5163-E1B0-4B3A-AD13-DC1B22638DC0}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="battleships\src\DiscoveryController.cs">
+    <Files>
+      <File FileName="battleships\src\MenuController.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\UtilityFunctions.cs" Line="90" Column="91" />
+      <File FileName="battleships\src\GameController.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\GameResources.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\GameState.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\EndingGameController.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\DiscoveryController.cs" Line="79" Column="117" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Battleships PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
