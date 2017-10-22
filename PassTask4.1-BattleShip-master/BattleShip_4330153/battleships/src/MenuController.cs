@@ -178,10 +178,13 @@ static class MenuController
 
 		/*Added HotKey to Pause Music*/
 		if (SwinGame.KeyTyped (KeyCode.vk_F1)) {
-			muted = true;
 			if (muted == true) {
-				SwinGame.StopMusic ();
-			};
+				Audio.PauseMusic ();
+				muted = false;
+			} else {
+				Audio.ResumeMusic ();
+				muted = true;
+			}
 		}
 		return false;
 	}

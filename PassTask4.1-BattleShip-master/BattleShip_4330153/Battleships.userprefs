@@ -4,12 +4,10 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="battleships\src\Model\BattleShipsGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BattleShip_4330153 Status">
     <Files>
-      <File FileName="battleships\src\UtilityFunctions.cs" Line="22" Column="27" />
-      <File FileName="battleships\src\DiscoveryController.cs" Line="74" Column="6" />
-      <File FileName="battleships\src\Model\Tile.cs" Line="12" Column="2" />
-      <File FileName="battleships\src\Model\BattleShipsGame.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\MenuController.cs" Line="1" Column="1" />
+      <File FileName="BattleShip_4330153 Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
