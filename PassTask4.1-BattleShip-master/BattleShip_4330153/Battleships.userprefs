@@ -7,6 +7,10 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="BattleShip_4330153 Status">
     <Files>
       <File FileName="battleships\src\MenuController.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\EndingGameController.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\GameResources.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\GameController.cs" Line="1" Column="1" />
+      <File FileName="battleships\src\HighScoreController.cs" Line="1" Column="1" />
       <File FileName="BattleShip_4330153 Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
