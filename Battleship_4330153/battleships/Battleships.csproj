@@ -135,6 +135,12 @@
     <WinLibraryFiles Include="lib\win\swingame.rc" />
     <WinLibraryFiles Include="lib\win\zlib1.dll" />
     <None Include="packages.config" />
+    <None Include="Resources\images\deployG.jpg" />
+    <None Include="Resources\images\deployP.jpg" />
+    <None Include="Resources\images\discoverG.jpg" />
+    <None Include="Resources\images\discoverP.jpg" />
+    <None Include="Resources\images\main_pageG.jpg" />
+    <None Include="Resources\images\main_pageP.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\**\*.cs" />

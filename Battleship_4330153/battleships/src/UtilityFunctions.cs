@@ -227,28 +227,78 @@ static class UtilityFunctions
 	/// <summary>
 	/// Draws the background for the current state of the game
 	/// </summary>
-	public static void DrawBackground ()
+	public static void DrawBackground (ThemeColor color)
 	{
-		switch (GameController.CurrentState) {
-		case GameState.ViewingMainMenu:
-		case GameState.ViewingGameMenu:
-		case GameState.AlteringSettings:
-			/*Added GameState MusicSetting*/
-		case GameState.MusicSettings:
-		case GameState.ViewingHighScores:
-			SwinGame.DrawBitmap (GameResources.GameImage ("Menu"), 0, 0);
-			break;
-		case GameState.Discovering:
-		case GameState.EndingGame:
-			SwinGame.DrawBitmap (GameResources.GameImage ("Discovery"), 0, 0);
-			break;
-		case GameState.Deploying:
-			SwinGame.DrawBitmap (GameResources.GameImage ("Deploy"), 0, 0);
-			break;
-		default:
-			SwinGame.ClearScreen ();
-			break;
-		}
+		if (color == ThemeColor.Pink){
+			switch (GameController.CurrentState) {
+				case GameState.ViewingMainMenu:
+				case GameState.ViewingGameMenu:
+				case GameState.AlteringSettings:
+				/*Add themecolor state*/
+				case GameState.ThemeColors:
+				/*Added GameState MusicSetting*/
+				case GameState.MusicSettings:
+				case GameState.ViewingHighScores:
+					SwinGame.DrawBitmap (GameResources.GameImage ("MenuP"), 0, 0);
+					break;
+				case GameState.Discovering:
+				case GameState.EndingGame:
+					SwinGame.DrawBitmap (GameResources.GameImage ("DiscoveryP"), 0, 0);
+					break;
+				case GameState.Deploying:
+					SwinGame.DrawBitmap (GameResources.GameImage ("DeployP"), 0, 0);
+					break;
+				default:
+					SwinGame.ClearScreen ();
+					break;
+				}
+			} else if (color == ThemeColor.Green) {
+				switch (GameController.CurrentState) {
+					case GameState.ViewingMainMenu:
+					case GameState.ViewingGameMenu:
+					case GameState.AlteringSettings:
+					/*Add themecolor state*/
+					case GameState.ThemeColors:
+					/*Added GameState MusicSetting*/
+					case GameState.MusicSettings:
+					case GameState.ViewingHighScores:
+						SwinGame.DrawBitmap (GameResources.GameImage ("MenuG"), 0, 0);
+						break;
+					case GameState.Discovering:
+					case GameState.EndingGame:
+						SwinGame.DrawBitmap (GameResources.GameImage ("DiscoveryG"), 0, 0);
+						break;
+					case GameState.Deploying:
+						SwinGame.DrawBitmap (GameResources.GameImage ("DeployG"), 0, 0);
+						break;
+					default:
+						SwinGame.ClearScreen ();
+						break;
+				}
+			} else {
+				switch (GameController.CurrentState) {
+					case GameState.ViewingMainMenu:
+					case GameState.ViewingGameMenu:
+					case GameState.AlteringSettings:
+					/*Add themecolor state*/
+					case GameState.ThemeColors:
+					/*Added GameState MusicSetting*/
+					case GameState.MusicSettings:
+					case GameState.ViewingHighScores:
+						SwinGame.DrawBitmap (GameResources.GameImage ("Menu"), 0, 0);
+						break;
+					case GameState.Discovering:
+					case GameState.EndingGame:
+						SwinGame.DrawBitmap (GameResources.GameImage ("Discovery"), 0, 0);
+						break;
+					case GameState.Deploying:
+						SwinGame.DrawBitmap (GameResources.GameImage ("Deploy"), 0, 0);
+						break;
+					default:
+						SwinGame.ClearScreen ();
+						break;
+				}
+			}
 
 		SwinGame.DrawFramerate (675, 585, GameResources.GameFont ("CourierSmall"));
 	}
@@ -339,7 +389,7 @@ static class UtilityFunctions
 		int i = 0;
 		for (i = 1; i <= ANIMATION_CELLS * FRAMES_PER_CELL; i++) {
 			UpdateAnimations ();
-			GameController.DrawScreen ();
+			GameController.DrawScreen (ThemeColor.Blue);
 		}
 	}
 }

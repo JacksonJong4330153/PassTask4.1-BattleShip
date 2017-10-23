@@ -25,6 +25,15 @@ public static class GameResources
 		NewImage ("Discovery", "discover.jpg");
 		NewImage ("Deploy", "deploy.jpg");
 
+		/*Add Pink and Green Background*/
+		NewImage ("MenuP","main_pageP.jpg");
+		NewImage ("DiscoveryP", "discoverP.jpg");
+		NewImage ("DeployP", "deployP.jpg");
+
+		NewImage ("MenuG","main_pageG.jpg");
+		NewImage ("DiscoveryG","discoverG.jpg");
+		NewImage ("DeployG", "deployG.jpg");
+
 		//Deployment
 
 		NewImage ("LeftRightButton", "deploy_dir_button_horiz.png");
