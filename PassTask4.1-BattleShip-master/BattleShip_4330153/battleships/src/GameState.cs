@@ -36,6 +36,11 @@ public enum GameState
 	MusicSettings,
 
 	/// <summary>
+	/// The theme color for game
+	/// </summary>
+	ThemeColors,
+
+	/// <summary>
 	/// Players are deploying their ships
 	/// </summary>
 	Deploying,

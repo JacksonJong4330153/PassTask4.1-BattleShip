@@ -183,7 +183,7 @@ static class HighScoreController
 			while (SwinGame.ReadingText ()) {
 				SwinGame.ProcessEvents ();
 
-				UtilityFunctions.DrawBackground ();
+				UtilityFunctions.DrawBackground (MenuController.TColor);
 				DrawHighScores ();
 				SwinGame.DrawText ("Name: ", Color.White, GameResources.GameFont ("Courier"), SCORES_LEFT, ENTRY_TOP);
 				SwinGame.RefreshScreen ();
@@ -204,4 +204,11 @@ static class HighScoreController
 			GameController.EndCurrentState ();
 		}
 	}
+	public static void SetHighScore ()
+	{
+		LoadScores ();
+	}
+
+	public static int HighestScore {
+		get { return _Scores [0].Value; }	}
 }

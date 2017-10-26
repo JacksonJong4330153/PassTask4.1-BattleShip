@@ -26,6 +26,7 @@ static class MenuController
 			/*Add Music*/
 			"MUSIC",
 			"SETUP",
+			"THEME",
 			"SCORES",
 			"QUIT"
 		},
@@ -45,6 +46,12 @@ static class MenuController
 			"MUTE",
 			"MUSIC1",
 			"MUSIC2"
+		},
+		/* Add sub menu for Theme*/
+		new string []{
+			"PINK",
+			"GREEN",
+			"BLUE"
 		}
 
 	};
@@ -61,13 +68,17 @@ static class MenuController
 	private const int SETUP_MENU = 2;
 	/*Added Music Menu*/
 	private const int MUSIC_MENU = 3;
+	/*Theme Menu*/
+	private const int THEME_MENU = 4;
 
 	private const int MAIN_MENU_PLAY_BUTTON = 0;
 	/*Added Music Menu Button*/
 	private const int MAIN_MENU_MUSIC_BUTTON = 1;
 	private const int MAIN_MENU_SETUP_BUTTON = 2;
-	private const int MAIN_MENU_TOP_SCORES_BUTTON = 3;
-	private const int MAIN_MENU_QUIT_BUTTON = 4;
+	/*Theme button*/
+	private const int MAIN_MENU_THEME_BUTTON = 3;
+	private const int MAIN_MENU_TOP_SCORES_BUTTON = 4;
+	private const int MAIN_MENU_QUIT_BUTTON = 5;
 
 	/*Added Sub Menu Button under Music*/
 	private const int MUSIC_MENU_MUTE_BUTTON = 0;
@@ -80,6 +91,14 @@ static class MenuController
 	private const int SETUP_MENU_HARD_BUTTON = 2;
 	private const int SETUP_MENU_TRAIN_BUTTON = 3;
 	private const int SETUP_MENU_EXIT_BUTTON = 4;
+
+	/*Theme colours button*/
+	private const int THEME_MENU_PINK_BUTTON = 0;
+	private const int THEME_MENU_GREEN_BUTTON = 1;
+	private const int THEME_MENU_BLUE_BUTTON = 2;
+
+	/*default theme*/
+	private static ThemeColor clr = ThemeColor.Blue;
 
 	private const int GAME_MENU_RETURN_BUTTON = 0;
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
@@ -131,7 +150,16 @@ static class MenuController
 			HandleMenuInput (MAIN_MENU, 0, 0);
 
 		}	}
+	/*Theme handler*/
+	public static void HandleThemeMenuInput ()
+	{
+		bool handled = false;
+		handled = HandleMenuInput (THEME_MENU, 1, 1);
 
+		if (!handled) {
+			HandleMenuInput (MAIN_MENU, 0, 0);
+		}
+	}
 	/// <summary>
 	/// Handle input in the game menu.
 	/// </summary>
@@ -225,6 +253,11 @@ static class MenuController
 		DrawButtons (MAIN_MENU);
 		DrawButtons (MUSIC_MENU, 1, 1);	}
 
+	/*Theme draw*/
+	public static void ThemeSettings ()
+	{
+		DrawButtons (MAIN_MENU);
+		DrawButtons (THEME_MENU, 1, 1);	}
 	/// <summary>
 	/// Draw the buttons associated with a top level menu.
 	/// </summary>
@@ -304,6 +337,10 @@ static class MenuController
 		case GAME_MENU:
 			PerformGameMenuAction (button);
 			break;
+			/*Call Theme performance action*/
+		case THEME_MENU:
+            PerformThemeMenuAction (button);
+			break;
 			/*Added PerformMusicMenuAction*/
 		case MUSIC_MENU:
             PerformMusicMenuAction (button);
@@ -327,6 +364,10 @@ static class MenuController
 			break;
 		case MAIN_MENU_TOP_SCORES_BUTTON:
 			GameController.AddNewState (GameState.ViewingHighScores);
+			break;
+			/*Add Themecolor*/
+		case MAIN_MENU_THEME_BUTTON :
+			GameController.AddNewState (GameState.ThemeColors);
 			break;
 		case MAIN_MENU_QUIT_BUTTON:
 			GameController.EndCurrentState ();
@@ -358,6 +399,25 @@ static class MenuController
 		//Always end state - handles exit button as well
 		GameController.EndCurrentState ();
 	}
+
+	/* Add method for PerformThemeMenuAction*/
+	public static void PerformThemeMenuAction (int button)
+	{
+		switch (button) {
+		case THEME_MENU_PINK_BUTTON:
+			GameController.DrawScreen (ThemeColor.Pink);
+			clr = ThemeColor.Pink;
+			break;
+		case THEME_MENU_GREEN_BUTTON:
+			GameController.DrawScreen (ThemeColor.Green);
+			clr = ThemeColor.Green;
+			break;
+		case THEME_MENU_BLUE_BUTTON:
+			GameController.DrawScreen (ThemeColor.Blue);
+			clr = ThemeColor.Blue;
+
+			break;
+		}	}
 
 	/*Add Method PerformMusicMenuAction*/
 	public static void PerformMusicMenuAction (int button)
@@ -406,4 +466,8 @@ static class MenuController
 			break;
 		}
 	}
+
+	/*Return current theme color*/
+	public static ThemeColor TColor {
+		get { return clr; }	}
 }

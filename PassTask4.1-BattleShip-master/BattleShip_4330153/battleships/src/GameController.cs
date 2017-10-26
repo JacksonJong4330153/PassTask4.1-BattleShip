@@ -125,7 +125,7 @@ public static class GameController
 	/// <param name="args">not used</param>
 	private static void GridChanged (object sender, EventArgs args)
 	{
-		DrawScreen ();
+       	DrawScreen (ThemeColor.Blue);
 		SwinGame.RefreshScreen ();
 	}
 
@@ -297,6 +297,10 @@ public static class GameController
 		case GameState.MusicSettings:
 			MenuController.HandleMusicMenuInput ();
 			break;
+			/*Add themesetting*/
+		case GameState.ThemeColors:
+			MenuController.HandleThemeMenuInput ();
+			break;
 		case GameState.Deploying:
 			DeploymentController.HandleDeploymentInput ();
 			break;
@@ -320,9 +324,15 @@ public static class GameController
 	/// <remarks>
 	/// What is drawn depends upon the state of the game.
 	/// </remarks>
-	public static void DrawScreen ()
+	public static void DrawScreen (ThemeColor color)
 	{
-		UtilityFunctions.DrawBackground ();
+		if (MenuController.TColor == ThemeColor.Pink) {
+			UtilityFunctions.DrawBackground (ThemeColor.Pink);
+		} else if (MenuController.TColor == ThemeColor.Green) {
+			UtilityFunctions.DrawBackground (ThemeColor.Green);
+		} else {
+			UtilityFunctions.DrawBackground (ThemeColor.Blue);
+		}
 
 		switch (CurrentState) {
 		case GameState.ViewingMainMenu:
@@ -333,6 +343,10 @@ public static class GameController
 			break;
 		case GameState.AlteringSettings:
 			MenuController.DrawSettings ();
+			break;
+			/*Add Theme draw*/
+		case GameState.ThemeColors :
+			MenuController.ThemeSettings ();
 			break;
 			/*Added Draw MusicSettings*/
 		case GameState.MusicSettings:
