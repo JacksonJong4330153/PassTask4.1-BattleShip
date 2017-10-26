@@ -10,7 +10,7 @@
       <File FileName="battleships\src\EndingGameController.cs" Line="47" Column="1" />
       <File FileName="battleships\src\GameResources.cs" Line="28" Column="36" />
       <File FileName="battleships\src\GameController.cs" Line="359" Column="37" />
-      <File FileName="battleships\src\DiscoveryController.cs" Line="86" Column="38" />
+      <File FileName="battleships\src\DiscoveryController.cs" Line="98" Column="1" />
       <File FileName="battleships\src\HighScoreController.cs" Line="34" Column="52" />
       <File FileName="battleships\src\ThemeColor.cs" Line="12" Column="2" />
       <File FileName="battleships\src\GameState.cs" Line="42" Column="2" />
