@@ -27,12 +27,12 @@ public static class GameResources
 
 		/*Add Pink and Green Background*/
 		NewImage ("MenuP","main_pageP.jpg");
-		NewImage ("DiscoveryP", "discoverP.jpg");
-		NewImage ("DeployP", "deployP.jpg");
+		NewImage ("DiscoveryP", "discoverPink.jpg");
+		NewImage ("DeployP", "deployPink.jpg");
 
 		NewImage ("MenuG","main_pageG.jpg");
-		NewImage ("DiscoveryG","discoverG.jpg");
-		NewImage ("DeployG", "deployG.jpg");
+		NewImage ("DiscoveryG","discoverGreen.jpg");
+		NewImage ("DeployG", "deployGreen.jpg");
 
 
 		//Deployment

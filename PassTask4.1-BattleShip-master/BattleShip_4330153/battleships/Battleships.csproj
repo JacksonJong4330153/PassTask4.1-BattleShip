@@ -345,6 +345,10 @@
     <None Include="Resources\images\discoverP.jpg" />
     <None Include="Resources\images\deployG.jpg" />
     <None Include="Resources\images\deployP.jpg" />
+    <None Include="Resources\images\deployGreen.jpg" />
+    <None Include="Resources\images\deployPink.jpg" />
+    <None Include="Resources\images\discoverGreen.jpg" />
+    <None Include="Resources\images\discoverPink.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\ThemeColor.cs" />
