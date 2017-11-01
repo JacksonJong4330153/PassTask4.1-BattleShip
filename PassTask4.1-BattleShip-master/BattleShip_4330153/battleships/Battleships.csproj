@@ -182,9 +182,6 @@
     <None Include="Resources\images\deploy_randomize_button.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\images\discover.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Resources\images\discover_quit_button.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -349,6 +346,9 @@
     <None Include="Resources\images\deployPink.jpg" />
     <None Include="Resources\images\discoverGreen.jpg" />
     <None Include="Resources\images\discoverPink.jpg" />
+    <None Include="Resources\images\discover.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\ThemeColor.cs" />
